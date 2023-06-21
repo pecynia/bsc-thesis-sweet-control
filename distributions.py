@@ -7,7 +7,7 @@ def gamma(units, alpha=2, rate=0.87):
     Returns an array of size 500, which represents the activity for 8.33 hours.
     params: alpha, rate
     '''
-    x = np.linspace(0, 10, 500) - 20/60
+    x = np.linspace(0, 10, 500) - 12.28/60
     gamma = stats.gamma.pdf(x, alpha, scale=1/rate) 
 
     for i in range(len(gamma)):
@@ -21,7 +21,7 @@ def lognorm(units, mu=0.75, sigma=0.75):
     Returns an array of size 500, which represents the activity for 8.33 hours.
     params: mu, sigma
     '''
-    x = np.linspace(0, 5, 500)          
+    x = np.linspace(0, 5, 500) - 12.28/60        
     lognorm = stats.lognorm.pdf(x, mu, scale=sigma)
     
     for i in range(len(lognorm)):
